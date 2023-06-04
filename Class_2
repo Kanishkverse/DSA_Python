@@ -1,0 +1,16 @@
+tn = int(input('enter starting number'))
+len = int(input('length of number'))
+d = int(input("difference btw numbers"))
+
+def ap(tn,len,d):
+    cur_value
+cur_value=tn
+ 
+for i in range(1,len+1):
+    print(cur_value, end=' ')
+    cur_value =cur_value + d
+          
+
+ 
+print (ap(tn,len,d))
+

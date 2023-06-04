@@ -1,0 +1,31 @@
+#str of the program
+def arth():
+    str=int(input(" the starting number "))
+    rate=int(input("Enter  common rate "))
+    last_term=int(input("Enter the last term "))
+    for i in range(0,last_term):
+        print(str,end=" ")
+        str=str+rate
+def geometry():
+    str=int(input("Enter the starting_number "))
+    ratio=int(input("Enter the common ratio "))
+    last_term=int(input("Enter the last term "))
+    for i in range(0,last_term):
+        print(str,end=" ")
+        str=str*ratio
+def menu():
+    print("\n1. arth progression")
+    print("2. geometry progression")
+    print("3. Quit")
+while True:#loop
+    menu()
+    choice=int(input("choose wisely "))
+    if choice==1:
+        arth()
+    elif choice==2:
+        geometry()
+    elif choice==3:
+        print("Have a good day, Submitted by Kanishka Samrat Kolakaluri")
+        break
+    else:
+        print("your choice is wrong.")#end of the program 

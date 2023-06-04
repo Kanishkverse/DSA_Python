@@ -1,0 +1,12 @@
+Operation: Addition
+Number of attempts: 0 
+Correct Attempts: 0
+Operation: Subtraction
+Number of attempts: 0 
+Correct Attempts: 0
+Operation: Multiplication
+Number of attempts: 0 
+Correct Attempts: 0 
+Operation: Division
+Number of attempts: 0
+Correct Attempts: 0

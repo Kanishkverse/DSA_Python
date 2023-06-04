@@ -1,0 +1,25 @@
+def main(abc):
+    answer = 0
+    
+    file = open("/Users/kanishk/Desktop/CPS 501/file handling/"+abc,"r")
+
+    for line in file:
+        try:
+                answer +=(int(line))
+                ans.write(line)
+        
+        except ValueError:
+            
+            with open("ans.txt") as ans:
+                print(ans.read())
+            print("sum of numbers{}".format(answer))    
+    
+    #print(answer)
+    file.close()
+
+
+
+
+abc = input("enter ")
+
+main(abc)

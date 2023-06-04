@@ -1,0 +1,7 @@
+To Kill a Mockingbird, Lee, 1960, 35.99, Adult, Fiction
+How to Win Friends and Influence People, Carnegie,1936, 15.99, Adult, Non-fiction
+The Art of War, Tzu, 1963, 19.99, Adult, Non-fiction
+Life of Pi, Martel, 2001, 58.75, Adult, Fiction
+The Immortal Life of Henrietta Lacks, Skloot, 2011, 49.99, Adult, Non-fiction Notes of a Native Son, Baldwin, 1955, 35.00, Adult, Non-fiction
+Tale of a Fourth Grade Nothing, Blum, 1972, 18.50, Young, Young adults
+sams, sam, 2022, 22, Young, Kids

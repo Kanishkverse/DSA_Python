@@ -1,0 +1,167 @@
+
+#Submitted by Kanishk
+#Assignment 4 - CPS 501 
+#24 October
+
+import random
+
+# Function to generate random numbers
+def gen(digit):
+    if digit == 1:
+        return random.randint(1, 9), random.randint(1, 9)
+    if digit ==2:   
+        return random.randint(10, 99), random.randint(10, 99)
+    else:    
+        return random.randint(100, 999), random.randint(10, 999)
+# Function for addition
+def add(n1, n2):
+    return str(n1+n2)
+
+# Function for subtraction
+def subtract(n1, n2):
+    return str(n1-n2)
+
+# Function for multiplication
+def multiply(n1, n2):
+    return str(n1*n2)
+
+# Function for division
+def divide(n1, n2):
+    res = "{0:.2f}".format(n1/n2)
+    return res
+
+if __name__ == "__main__":
+    
+    username = input("Please Enter Your Name: ")
+
+
+
+    print(f"Welcome, {username}!")
+    
+    
+    stats = [[0,0], [0,0], [0,0], [0,0]]
+    report_asked = False
+    #Taking number of times user wants to do the operations
+
+    numtime = int(input("So, How many times you will practice this option"))
+    
+    while numtime>0:
+        numtime -= 1
+        # Presenting choices
+        print("List of Operations:")
+        print("1-Addition")
+        print("2-Subtraction")
+        print("3-Multiplication")
+        print("4-Division")
+        print("5-Report")
+        print("6-Exit")
+
+       
+        # Taking opinion
+        options = int(input(f"hey, {username}!, Please enter your choice from above(1/2/3/4/5/6): "))
+        
+
+
+        # Exiting on 6th choice
+        if options == 6:
+            if not report_asked:
+                if input("No report was asked, are you sure to quit?(y/n)"=='n'):
+                    continue
+                    print("Thank you!")
+            break
+
+        if options == 5:
+                report_asked = True
+                
+                print("Operation: Addition")
+                print(f"Number of attempts: ", stats[0][0])
+                print(f"Correct Attempts: ", stats[0][1])
+                            
+                print("Operation: Subtraction")
+                print(f"Number of attempts: ", stats[1][0])
+                print(f"Correct Attempts: ", stats[1][1])
+                            
+                print("Operation: Multiplication")
+                print(f"Number of attempts: ", stats[2][0])
+                print(f"Correct Attempts: ", stats[2][1])
+                            
+                print("Operation: Addition")
+                print(f"Number of attempts: ", stats[3][0])
+                print(f"Correct Attempts: ", stats[3][1])
+                input("Press Enter key to continue")                
+                # adding one as showing report doesnt come under operation count
+                numtime += 1
+                continue             
+
+
+
+        # Taking digits choice
+        dig = int(input("Choose the number of digits(1/2/3): "))
+        
+        # Generating the digits
+        n1, n2 = -1, -1
+        if dig == 1:
+            n1, n2 = gen(1)
+        else:
+            n1, n2 = gen(dig)
+
+        # Reforming randomly generating digits
+        if n2 > n1:
+            n1, n2 = n2, n1
+
+        # Presenting the numbers
+        print(f"The numbers are: {n1} and {n2}")
+
+        # Seeking the result
+        res = input("Please enter the result of the operation: ")
+
+        # Performing the operations according to choices
+        correct = -1
+        if options == 1:
+            correct = add(n1, n2)
+            stats[0][0]+=1
+            if res == correct:
+                stats[0][1] += 1
+
+        elif options == 2:
+            correct = subtract(n1, n2)
+            stats[1][0]+=1
+            if res== correct:
+                stats[1][1] += 1
+
+        elif options == 3:
+            correct = multiply(n1, n2)
+            stats[2][0]+=1
+            if res== correct:
+             stats[2][1] += 1
+
+        elif options == 4:
+            correct = divide(n1, n2)
+            stats[3][0]+=1
+            if res== correct:
+             stats[3][1] += 1
+
+        # Reinforcers List
+        pos_rein = ['Excellent', 'Very Good', 'Well Done', 'Awesome', 'Good Job', 'Correct'] 
+        sup_rein = ['Try Again', 'OOPS', 'Not Quite', 'Look at it again', 'Sorry']       
+    
+        # For correct result
+        if res == correct:
+
+            print(random.choice(pos_rein))
+            input("Press Enter key to continue")
+            continue
+
+        # For incorrect result
+        else:
+            print(random.choice(sup_rein))
+            
+            # Asking again
+            res2 = input("Re-enter the result of the operation: ")
+            if res2 == correct:
+                print(random.choice(pos_rein))
+            else:
+                print(f"The correct answer is {correct}!")
+            input("Press Enter key to continue")
+            continue
+

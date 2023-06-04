@@ -1,0 +1,31 @@
+#str of the program
+def usd2pd():
+    str=int(input(" the starting number "))
+    
+    
+    for i in range(0,last_term):
+        print(str,end=" ")
+        str=str+rate
+def pd2usd():
+    str=int(input("Enter the starting_number "))
+    ratio=int(input("Enter the common ratio "))
+    last_term=int(input("Enter the last term "))
+    for i in range(0,last_term):
+        print(str,end=" ")
+        str=str*ratio
+def Currency_menu():
+    print("\n1 – Convert US Dollar to British Pound")
+    print("2 – Convert British Pound to US Dollar")
+    print("3. Exit")
+while True:#loop
+    Currency_menu()
+    choice=int(input("choose wisely "))
+    if choice==1:
+        usd2pd()
+    elif choice==2:
+        pd2usd()
+    elif choice==3:
+        print("Have a good day, Submitted by Kanishk")
+        break
+    else:
+        print("your choice is wrong.")#end of the program 
